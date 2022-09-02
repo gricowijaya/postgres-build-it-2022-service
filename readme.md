@@ -11,7 +11,7 @@
   ```bash
   psql --host=pgdb_build_it_2022 --dbname=build_it_2022_practice --username=build_it
   ```
-  then just type the password, to access the sqlpad we can just go to [sqlpad](103.186.1.168:3001)
+  then just type the password, to access the sqlpad we can just go to [sqlpad](http://103.186.1.168:3001/signin)
 
 * testing ON_TESTING 
 * setup database for the practice
