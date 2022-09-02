@@ -6,17 +6,20 @@ services:
     ports:
       - "5432:5432"
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB: build_it_2022_practice
+      - POSTGRES_USER: build_it
+      - POSTGRES_PASSWORD: build_it_2022
+    volumes:
+      - db-data:/var/lib/postgresql/data
 
   sqlpad:
     container_name: sqlpad_build_it_2022
     image: "sqlpad/sqlpad:6"
     restart: always
     ports:
-      - 5000:3000
+      - 3001:3000
     environment:
-      - SQLPAD_ADMIN=admin@sqlpad.com
+      - SQLPAD_ADMIN=admin@buildit2022.com
       - SQLPAD_ADMIN_PASSWORD=83Wrw50
     volumes:
       - /mnt/sqlpad:/var/lib/sqlpad
