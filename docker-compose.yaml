@@ -6,9 +6,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-      - POSTGRES_DB=build_it_2022_practice
-      - POSTGRES_USER=build_it
-      - POSTGRES_PASSWORD=build_it_2022
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     volumes:
       - db-data:/var/lib/postgresql/data
 
@@ -19,8 +19,8 @@ services:
     ports:
       - 3001:3000
     environment:
-      - SQLPAD_ADMIN=admin@buildit2022.com
-      - SQLPAD_ADMIN_PASSWORD=83Wrw50
+      - SQLPAD_ADMIN=${ADMIN_USERNAME}
+      - SQLPAD_ADMIN_PASSWORD=${ADMIN_PASSWORD}
     volumes:
       - /mnt/sqlpad:/var/lib/sqlpad
 
