@@ -9,8 +9,8 @@ services:
       - POSTGRES_DB: build_it_2022_practice
       - POSTGRES_USER: build_it
       - POSTGRES_PASSWORD: build_it_2022
-    volumes:
-      - db-data:/var/lib/postgresql/data
+    # volumes:
+    #   - db-data:/var/lib/postgresql/data
 
   sqlpad:
     container_name: sqlpad_build_it_2022
@@ -24,5 +24,5 @@ services:
     volumes:
       - /mnt/sqlpad:/var/lib/sqlpad
 
-volumes:
-  db-data:
+# volumes:
+#   db-data:
