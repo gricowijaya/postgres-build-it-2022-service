@@ -23,3 +23,6 @@ services:
       - SQLPAD_ADMIN_PASSWORD=83Wrw50
     volumes:
       - /mnt/sqlpad:/var/lib/sqlpad
+
+volumes:
+  db-data:
