@@ -1,4 +1,4 @@
-version: '3.5'
+version: '3.6'
 services:
   pddb_test:
     container_name: pgdb_build_it_2022
@@ -11,6 +11,22 @@ services:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     volumes:
       - db-data:/var/lib/postgresql/data
+  
+  mysql:
+    container_name: mysql_build_it_2022
+    image: mysql:latest
+    restart: always
+    ports:
+      - "3307:3306"
+    expose:
+      - "3307"
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DB}
+      - MYSQL_ROOT_PASSWORD=${ADMIN_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - db-data-mysql:/var/lib/mysql
 
   sqlpad:
     container_name: sqlpad_build_it_2022
@@ -26,3 +42,4 @@ services:
 
 volumes:
   db-data:
+  db-data-mysql:
