@@ -12,7 +12,71 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
   
-  mysql:
+  mysql-202:
+    container_name: mysql_build_it_2022
+    image: mysql:latest
+    restart: always
+    ports:
+      - "3302:3306"
+    expose:
+      - "3302"
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DB}
+      - MYSQL_ROOT_PASSWORD=${ADMIN_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - db-data-mysql:/var/lib/mysql
+
+  mysql-203-A:
+    container_name: mysql_build_it_2022
+    image: mysql:latest
+    restart: always
+    ports:
+      - "3303:3306"
+    expose:
+      - "3303"
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DB}
+      - MYSQL_ROOT_PASSWORD=${ADMIN_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - db-data-mysql:/var/lib/mysql
+
+  mysql-203-B:
+    container_name: mysql_build_it_2022
+    image: mysql:latest
+    restart: always
+    ports:
+      - "3304:3306"
+    expose:
+      - "3304"
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DB}
+      - MYSQL_ROOT_PASSWORD=${ADMIN_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - db-data-mysql:/var/lib/mysql
+
+  mysql-203-C:
+    container_name: mysql_build_it_2022
+    image: mysql:latest
+    restart: always
+    ports:
+      - "3305:3306"
+    expose:
+      - "3305"
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DB}
+      - MYSQL_ROOT_PASSWORD=${ADMIN_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - db-data-mysql:/var/lib/mysql
+
+  mysql-101:
     container_name: mysql_build_it_2022
     image: mysql:latest
     restart: always
