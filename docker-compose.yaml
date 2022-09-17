@@ -13,7 +13,7 @@ services:
       - db-data:/var/lib/postgresql/data
   
   mysql-202:
-    container_name: mysql_build_it_2022
+    container_name: mysql_build_it_2022_202
     image: mysql:latest
     restart: always
     ports:
@@ -29,7 +29,7 @@ services:
       - db-data-mysql:/var/lib/mysql
 
   mysql-203-A:
-    container_name: mysql_build_it_2022
+    container_name: mysql_build_it_2022_203_A
     image: mysql:latest
     restart: always
     ports:
@@ -45,7 +45,7 @@ services:
       - db-data-mysql:/var/lib/mysql
 
   mysql-203-B:
-    container_name: mysql_build_it_2022
+    container_name: mysql_build_it_2022_203_B
     image: mysql:latest
     restart: always
     ports:
@@ -61,7 +61,7 @@ services:
       - db-data-mysql:/var/lib/mysql
 
   mysql-203-C:
-    container_name: mysql_build_it_2022
+    container_name: mysql_build_it_2022_203_C
     image: mysql:latest
     restart: always
     ports:
@@ -77,7 +77,7 @@ services:
       - db-data-mysql:/var/lib/mysql
 
   mysql-101:
-    container_name: mysql_build_it_2022
+    container_name: mysql_build_it_2022_101
     image: mysql:latest
     restart: always
     ports:
