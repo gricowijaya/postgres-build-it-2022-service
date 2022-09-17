@@ -26,7 +26,7 @@ services:
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     volumes:
-      - db-data-mysql:/var/lib/mysql
+      - db-data-mysql-202:/var/lib/mysql
 
   mysql-203-A:
     container_name: mysql_build_it_2022_203_A
@@ -42,7 +42,7 @@ services:
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     volumes:
-      - db-data-mysql:/var/lib/mysql
+      - db-data-mysql-203-A:/var/lib/mysql
 
   mysql-203-B:
     container_name: mysql_build_it_2022_203_B
@@ -58,7 +58,7 @@ services:
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     volumes:
-      - db-data-mysql:/var/lib/mysql
+      - db-data-mysql-203-B:/var/lib/mysql
 
   mysql-203-C:
     container_name: mysql_build_it_2022_203_C
@@ -74,7 +74,7 @@ services:
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     volumes:
-      - db-data-mysql:/var/lib/mysql
+      - db-data-mysql-203-C:/var/lib/mysql
 
   mysql-101:
     container_name: mysql_build_it_2022_101
@@ -90,7 +90,7 @@ services:
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     volumes:
-      - db-data-mysql:/var/lib/mysql
+      - db-data-mysql-101:/var/lib/mysql
 
   sqlpad:
     container_name: sqlpad_build_it_2022
@@ -106,4 +106,8 @@ services:
 
 volumes:
   db-data:
-  db-data-mysql:
+  db-data-mysql-101:
+  db-data-mysql-202:
+  db-data-mysql-203-A:
+  db-data-mysql-203-B:
+  db-data-mysql-203-C:
